@@ -72,7 +72,7 @@ Chạy theo thứ tự từ Notebook 1 → 4:
 |-------|---------|-----------|
 | **Logistic Regression** | Baseline | Linear boundary, giải thích được, nhanh |
 | **XGBoost** | Nâng cao | Gradient boosting, bắt non-linear patterns |
-| **LightGBM** ⭐ | Best model | Tốc độ cao, leaf-wise, optimal threshold |
+| **LightGBM** | Top model | Tốc độ cao, leaf-wise, optimal threshold |
 
 **Primary metric:** F1-Score (vì class imbalance ~40/60)  
 **Secondary:** ROC-AUC, Precision, Recall
