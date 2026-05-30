@@ -17,16 +17,21 @@ mini_project_ml/
 ├── README.md
 │
 ├── data/
-│   ├── synthetic_data.csv          # Bản copy từ nguồn gốc
-│   ├── processed_data.csv          # Sau preprocessing pipeline
-│   ├── derived_features.csv        # Các biến phái sinh
-│   └── feature_data.csv            # Dataset cuối (gốc + derived)
+│   ├── synthetic_data.csv          # Bản copy từ nguồn gốc (NB1)
+│   ├── processed_data.csv          # 16 raw features sau encode + impute (NB3 Bước 1B)
+│   ├── derived_features.csv        # 15 derived features + target (NB3 Bước 2)
+│   └── feature_data.csv            # Dataset cuối: 31 features + target (NB3 Bước 2)
 │
 └── models/
-    ├── best_model.pkl              # LightGBM tốt nhất
-    ├── feature_importance.csv      # Tầm quan trọng đặc trưng
-    ├── optimal_threshold.pkl       # Ngưỡng tối ưu F1
-    └── preprocessor.pkl            # sklearn Pipeline
+    ├── best_model.pkl              # LightGBM — model tốt nhất
+    ├── xgb_model.pkl               # XGBoost
+    ├── lr_model.pkl                # Logistic Regression
+    ├── preprocessor.pkl            # StandardScaler + LabelEncoders
+    ├── feature_importance.csv      # Feature importance (LightGBM + XGBoost)
+    ├── optimal_threshold.pkl       # Threshold tối ưu LightGBM θ* (Val set)
+    ├── xgb_optimal_threshold.pkl   # Threshold tối ưu XGBoost θ* (Val set)
+    ├── lr_optimal_threshold.pkl    # Threshold tối ưu LR θ* (Val set)
+    └── test_data.pkl               # X_test, X_val, y_test, y_val (70/15/15 split)
 ```
 
 ---
